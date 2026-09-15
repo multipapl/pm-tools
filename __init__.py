@@ -21,8 +21,6 @@ class PM_UI_State(bpy.types.PropertyGroup):
     show_converters: bpy.props.BoolProperty(name="Converters", default=False)
     show_management: bpy.props.BoolProperty(name="Scene Management", default=False)
     show_optimization: bpy.props.BoolProperty(name="Scene Optimization", default=True)
-    show_lightmap_baker: bpy.props.BoolProperty(name="Lightmap Baker", default=True)
-    show_vr_project: bpy.props.BoolProperty(name="VR Project", default=True)
     show_material_override: bpy.props.BoolProperty(name="Material Override", default=False)
     show_material_override_lookdev: bpy.props.BoolProperty(name="Material Override Lookdev", default=True)
     show_other: bpy.props.BoolProperty(name="Other Tools", default=False)
@@ -46,8 +44,6 @@ class PM_PT_MainPanel(bpy.types.Panel):
             "CONVERTERS": [],
             "SCENE_MANAGEMENT": [],
             "SCENE_OPTIMIZATION": [],
-            "LIGHTMAP_BAKER": [],
-            "VR_PROJECT": [],
             "MATERIAL_OVERRIDE_LOOKDEV": [],
             "OTHER": [],
             "MATERIAL_OVERRIDE": []
@@ -67,8 +63,6 @@ class PM_PT_MainPanel(bpy.types.Panel):
             "CONVERTERS": ("CONVERTERS", "show_converters"),
             "SCENE_MANAGEMENT": ("SCENE MANAGEMENT", "show_management"),
             "SCENE_OPTIMIZATION": ("SCENE OPTIMIZATION", "show_optimization"),
-            "LIGHTMAP_BAKER": ("LIGHTMAP BAKER", "show_lightmap_baker"),
-            "VR_PROJECT": ("VR PROJECT", "show_vr_project"),
             "MATERIAL_OVERRIDE_LOOKDEV": ("MATERIAL OVERRIDE LOOKDEV", "show_material_override_lookdev"),
             "OTHER": ("OTHER TOOLS", "show_other"),
             "MATERIAL_OVERRIDE": ("MATERIAL OVERRIDE (DEPRECATED)", "show_material_override")
@@ -79,8 +73,6 @@ class PM_PT_MainPanel(bpy.types.Panel):
             "CONVERTERS": "DRIVER",             # Technical/Logic feel
             "SCENE MANAGEMENT": "SCENE_DATA",   # Standard Scene icon
             "SCENE OPTIMIZATION": "MODIFIER",   # Modifiers/Tweaks
-            "LIGHTMAP BAKER": "LIGHTPROBE_SPHERE",
-            "VR PROJECT": "WORLD",
             "MATERIAL OVERRIDE LOOKDEV": "NODETREE",
             "OTHER TOOLS": "PREFERENCES", # Using "OTHER TOOLS" to match the title in category_map
             "MATERIAL OVERRIDE (DEPRECATED)": "SHADING_RENDERED",
