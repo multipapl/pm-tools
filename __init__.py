@@ -4,7 +4,7 @@ import pkgutil
 import os
 
 bl_info = {
-    "name": "PM Tools v2.1",
+    "name": "PM Tools",
     "author": "User",
     "version": (2, 1, 1),
     "blender": (5, 2, 0),
@@ -29,7 +29,7 @@ class PM_UI_State(bpy.types.PropertyGroup):
 
 class PM_PT_MainPanel(bpy.types.Panel):
     """The only main container in the N-panel tab"""
-    bl_label = "PM TOOLS"
+    bl_label = "PM Tools"
     bl_idname = "PM_PT_main_panel"
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
